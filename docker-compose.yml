@@ -1,0 +1,21 @@
+version: '4.0'
+
+services:
+  reg-service:
+    image: part2:latest
+    ports:
+      - "8082:8082"
+    networks:
+      - my_network
+
+
+  confirmation-service:
+    image: part3:latest
+    ports:
+      - "8083:8083"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

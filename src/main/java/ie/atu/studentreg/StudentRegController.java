@@ -18,7 +18,7 @@ public class StudentRegController {
         this.regConfirmationClient = regConfirmationClient;
     }
 
-    @PostMapping("/registered")
+    @PostMapping("/approved")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Map<String, String> IncomingRegistrationRequest(@RequestBody StudentDetails studentDetails) {
         System.out.println("Student registered: " + studentDetails);
