@@ -2,7 +2,7 @@ version: '4.0'
 
 services:
   reg-service:
-    image: part2:latest
+    image: student_app_part2:latest
     ports:
       - "8082:8082"
     networks:
@@ -10,7 +10,7 @@ services:
 
 
   confirmation-service:
-    image: part3:latest
+    image: student_app_part3:latest
     ports:
       - "8083:8083"
     networks:
