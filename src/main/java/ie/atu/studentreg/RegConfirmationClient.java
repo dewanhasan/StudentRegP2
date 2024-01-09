@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Map;
 
-@FeignClient(name = "confirmation-service", url = "http://confirmation-service:8083")
+@FeignClient(name = "confirmation-service", url = "${feign.url}")
 public interface RegConfirmationClient {
     @PostMapping("/confirmReg")
     Map<String, String> confirmRegistration(@RequestBody StudentDetails studentDetails);
